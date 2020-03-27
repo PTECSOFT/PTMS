@@ -1,0 +1,20 @@
+1) Copy the "style.css" file to your HTTP server document root.
+2) Add you system options in the config.py file (instructions for this are at the bottom of the file).
+   This works with by identifying your system hostname, and then loading the specific config for that device.
+3) run ptms.py, this should work with the following:
+
+./ptms.py start <path to index.html/index.htm file>
+
+4) If you want to start the server at boot, you can make a script like the following with nano as root
+and then make it executable with "sudo chmod 777 /etc/profile.d/serverinit.sh":
+
+GNU nano 4.7                                     /etc/profile.d/serverinit.sh
+
+/home/$HOME/monitorserver.py start /srv/http/index.html &
+
+
+
+^G Get Help    ^O Write Out   ^W Where Is    ^K Cut Text    ^J Justify     ^C Cur Pos     M-U Undo       M-A Mark Text
+^X Exit        ^R Read File   ^\ Replace     ^U Paste Text  ^T To Spell    ^_ Go To Line  M-E Redo       M-6 Copy Text
+
+EOF
